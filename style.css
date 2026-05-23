@@ -1,0 +1,304 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:white;
+    font-family:'JetBrains Mono', monospace;
+
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+::selection{
+    background:#00ff88;
+    color:black;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+.container{
+    width:min(700px, 92%);
+    margin:auto;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+    width:100%;
+    padding:25px 0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    color:#666;
+    font-size:13px;
+    text-transform:uppercase;
+    transition:.2s;
+    letter-spacing:1px;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    margin-top:70px;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:25px;
+
+    text-shadow:0 0 20px rgba(255,255,255,.08);
+}
+
+.hero-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+    margin-bottom:35px;
+}
+
+.hero-list div{
+    color:#8f8f8f;
+    font-size:14px;
+}
+
+.hero-list span{
+    color:#00ff88;
+    margin-right:10px;
+}
+
+.desc{
+    color:#d4d4d4;
+    line-height:1.9;
+    font-size:15px;
+    margin-bottom:40px;
+}
+
+.jp{
+    color:#6f6f6f;
+    margin-top:10px;
+    font-size:13px;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+
+section{
+    margin-top:55px;
+}
+
+.section-title{
+    color:#7a7a7a;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:14px;
+    margin-bottom:22px;
+    font-weight:700;
+}
+
+/* ========================= */
+/* LANYARD */
+/* ========================= */
+
+.presence img{
+    border-radius:12px;
+    border:1px solid #161616;
+}
+
+/* ========================= */
+/* PROJECTS */
+/* ========================= */
+
+.projects{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.project{
+    border-left:1px solid #1c1c1c;
+    padding-left:18px;
+
+    transition:.2s;
+}
+
+.project:hover{
+    border-color:#00ff88;
+}
+
+.project-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:7px;
+}
+
+.project-top h3{
+    font-size:24px;
+}
+
+.tag{
+    color:#00ff88;
+    font-size:11px;
+    text-transform:uppercase;
+}
+
+.project p{
+    color:#8b8b8b;
+    line-height:1.7;
+    margin-bottom:8px;
+}
+
+.project a{
+    color:#4f83ff;
+    font-size:14px;
+}
+
+.project a:hover{
+    text-decoration:underline;
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.stats-grid img{
+    border-radius:12px;
+    border:1px solid #161616;
+}
+
+/* ========================= */
+/* SOCIALS */
+/* ========================= */
+
+.socials{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.socials a{
+    color:white;
+    font-size:15px;
+    transition:.2s;
+}
+
+.socials a:hover{
+    color:#00ff88;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.buttons-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.buttons-grid img{
+    width:88px;
+    height:31px;
+
+    image-rendering:pixelated;
+
+    transition:.2s;
+    border:1px solid #111;
+}
+
+.buttons-grid img:hover{
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+    margin-top:90px;
+    margin-bottom:30px;
+
+    border-top:1px solid #141414;
+
+    padding-top:25px;
+
+    color:#5c5c5c;
+    font-size:13px;
+}
+
+/* ========================= */
+/* GLOW */
+/* ========================= */
+
+.glow{
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    background:radial-gradient(circle, rgba(0,255,136,.08), transparent 70%);
+
+    top:-250px;
+    right:-250px;
+
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .project-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    nav{
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+}
