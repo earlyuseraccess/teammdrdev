@@ -14,7 +14,7 @@ body {
     font-family: 'JetBrains Mono', monospace;
 
     min-height: 100vh;
-    overflow-x: hidder;
+    overflow-x: hidden;
 }
 
 ::selection {
@@ -145,4 +145,47 @@ nav a:hover{
     font-size: 30px;
     margin-bottom: 20px;
     text-shadow: 0 0 20px rgba(255, 255, 255, .08);
+}
+
+/* THEME PICKER */
+.selection-info {
+    margin-bottom: 25px;
+}
+
+.selection-info .section-title {
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.color-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.color-options-wrapper {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.color-options {
+    display: flex;
+    gap: 15px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    border-color: #00ff88;
 }
