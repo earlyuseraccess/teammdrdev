@@ -1,0 +1,271 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg, #000);
+    color:var(--fg, #fff);
+    font-family:'JetBrains Mono', monospace;
+
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+:root{
+    --bg:#000;
+    --fg:#fff;
+    --muted:#888;
+    --muted2:#666;
+    --accent:#00ff88;
+    --link:#4f83ff;
+    --border:#1d1d1d;
+}
+
+::selection{
+    background:#00ff88;
+    color:black;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+.container{
+    width:min(850px, 92%);
+    margin:auto;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+    width:100%;
+    padding:30px 0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    color:var(--muted2);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:var(--fg);
+}
+
+/* ========================= */
+/* BACK */
+/* ========================= */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    transition: color .2s ease;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+    margin-top:80px;
+    margin-bottom:70px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.hero p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.8;
+    max-width:650px;
+}
+
+/* ========================= */
+/* PROJECTS */
+/* ========================= */
+
+.projects{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    margin-top:40px;
+    margin-bottom:80px;
+}
+
+.project{
+    background:#0d0d0d;
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:28px;
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.project:hover{
+    transform:translateY(-3px);
+
+    border-color:#2a2a2a;
+    background:#121212;
+}
+
+.project .title{
+    font-size:22px;
+    font-weight:700;
+    color:var(--fg);
+    margin-bottom:10px;
+}
+
+.project .description{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
+}
+
+.project .links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:5px;
+}
+
+.project .links a{
+    padding:10px 14px;
+
+    border-radius:10px;
+
+    background:#151515;
+    border:1px solid #262626;
+
+    color:var(--accent);
+    font-size:13px;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.project .links a:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:black;
+
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* THEME PICKER */
+/* ========================= */
+
+.selection-info{
+    margin-top:50px;
+    margin-bottom:40px;
+}
+
+.selection-info .section-title{
+    font-size:13px;
+    color:var(--muted2);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:18px;
+}
+
+.color-options-container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.color-options-wrapper{
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.color-options{
+    display:flex;
+    gap:15px;
+    width:max-content;
+}
+
+.color-option{
+    width:32px;
+    height:32px;
+
+    border-radius:50%;
+    border:2px solid #333;
+
+    cursor:pointer;
+
+    flex-shrink:0;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.color-option:hover{
+    transform:scale(1.12);
+
+    border-color:var(--accent);
+
+    box-shadow:0 0 15px rgba(0,255,136,.35);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:700px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .project{
+        padding:22px;
+    }
+
+    .project .title{
+        font-size:19px;
+    }
+}
