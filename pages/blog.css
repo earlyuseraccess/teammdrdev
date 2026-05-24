@@ -1,38 +1,52 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #000;
-    color: white;
-    font-family: 'JetBrains Mono', monospace;
-
-    min-height: 100vh;
-    overflow-x: hidden;
+:root{
+    --bg:#000;
+    --fg:#fff;
+    --muted:#888;
+    --muted2:#666;
+    --accent:#00ff88;
+    --link:#4f83ff;
+    --border:#1d1d1d;
 }
 
-::selection {
-    background: #00ff88;
-    color: black;
+body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'JetBrains Mono', monospace;
+
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
-a {
-    text-decoration: none;
+::selection{
+    background:var(--accent);
+    color:black;
 }
 
-img {
-    max-width: 100%;
+a{
+    text-decoration:none;
 }
 
-.container {
-    width: min(700px, 92%);
-    margin: auto;
+img{
+    max-width:100%;
+}
+
+.container{
+    width:min(700px, 92%);
+    margin:auto;
 }
 
 /* ========================= */
@@ -50,15 +64,27 @@ nav{
 }
 
 nav a{
-    color:#666;
+    color:var(--muted2);
     font-size:13px;
     text-transform:uppercase;
-    transition:.2s;
     letter-spacing:1px;
+    transition:.2s;
 }
 
 nav a:hover{
-    color:white;
+    color:var(--fg);
+}
+
+/* ========================= */
+/* BACK */
+/* ========================= */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--muted);
+    font-size: 14px;
+    transition: color .2s ease;
 }
 
 /* ========================= */
@@ -75,19 +101,25 @@ section{
 
 .hero{
     margin-top:70px;
+    margin-bottom:50px;
 }
 
 .hero h1{
-    font-size:38px;
-    margin-bottom:25px;
+    font-size:30px;
+    margin-bottom:20px;
+    text-shadow:0 0 20px rgba(255,255,255,.08);
 }
 
 .hero p{
-    color:#aaa;
+    color:var(--muted);
     font-size:15px;
     line-height:1.6;
     margin-bottom:25px;
 }
+
+/* ========================= */
+/* BLOG */
+/* ========================= */
 
 .blog-posts{
     display:flex;
@@ -100,92 +132,66 @@ section{
     flex-direction:column;
     gap:15px;
 }
+
 .blog-post h2{
     font-size:22px;
+    color:var(--fg);
 }
 
 .blog-post p{
-    color:#8f8f8f;
+    color:var(--muted);
     line-height:1.8;
     font-size:14px;
 }
 
-nav{
-    width:100%;
-    padding:25px 0;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:25px;
-}
-
-nav a{
-    color:#666;
-    font-size:13px;
-    text-transform:uppercase;
-    transition:.2s;
-    letter-spacing:1px;
-}
-
-nav a:hover{
-    color:white;
-}
-
-/* ========================= *:/
-/* HERO */
+/* ========================= */
+/* THEME PICKER */
 /* ========================= */
 
-.hero {
-    margin-top: 70px;
-    margin-bottom: 50px;
+.selection-info{
+    margin-bottom:25px;
 }
 
-.hero h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    text-shadow: 0 0 20px rgba(255, 255, 255, .08);
+.selection-info .section-title{
+    font-size:14px;
+    color:var(--muted2);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:15px;
 }
 
-/* THEME PICKER */
-.selection-info {
-    margin-bottom: 25px;
+.color-options-container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-.selection-info .section-title {
-    font-size: 14px;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+.color-options-wrapper{
+    overflow-x:auto;
+    padding-bottom:10px;
 }
 
-.color-options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.color-options{
+    display:flex;
+    gap:15px;
 }
 
-.color-options-wrapper {
-    overflow-x: auto;
-    padding-bottom: 10px;
+.color-option{
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+    border:2px solid #333;
+
+    cursor:pointer;
+
+    transition:
+        transform .2s,
+        border-color .2s,
+        box-shadow .2s;
 }
 
-.color-options {
-    display: flex;
-    gap: 15px;
-}
-
-.color-option {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid #333;
-    cursor: pointer;
-    transition: transform .2s, border-color .2s;
-}
-
-.color-option:hover {
-    transform: scale(1.1);
-    border-color: #00ff88;
+.color-option:hover{
+    transform:scale(1.1);
+    border-color:var(--accent);
 }
