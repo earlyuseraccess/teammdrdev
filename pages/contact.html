@@ -32,42 +32,30 @@
             <div class="contact-form">
                 <div class="form-container">
                     <h2>Send a Message</h2>
-                    <form action="https://formspree.io/f/mnqvydqv" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <button type="submit">Send</button>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="4fe9dc8c-0391-4fbc-85e8-ad974f22616c">
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send</button>
+
                     </form>
                     <!-- Envoie des infos -->
                      <div class="form-responses">
                         <p class="success-message">Your message has been sent successfully!</p>
                         <p class="error-message">There was an error sending your message. Please try again.</p>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-            <!-- COLOR OPTIONS -->
-        <section>
-        <div class="color-options-container">
-            <p class="section-title">select theme</p>
-
-            <div class="color-options-wrapper">
-            <div class="color-options">
-                <button class="color-option" data-theme="dark" style="background:#000"></button>
-                <button class="color-option" data-theme="gray" style="background:#1e1e1e"></button>
-                <button class="color-option" data-theme="blue" style="background:#0b1220"></button>
-                <button class="color-option" data-theme="purple" style="background:#120a1f"></button>
-                <button class="color-option" data-theme="cyber" style="background:#050505"></button>
-                <button class="color-option" data-theme="caffee" style="background: #352815"></button>
-            </div>
-            </div>
-
-        </div>
-        </section>
             
             <footer>
                 © 2026 teammdr
